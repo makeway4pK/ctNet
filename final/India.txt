@@ -1,0 +1,87 @@
+Agartala
+Aizawl
+Bengaluru
+Bhopal
+Bhubaneshwar
+Chennai
+Dehradun
+Gandhinagar
+Gangtok
+Guwahati
+Hyderabad
+Imphal
+Itanagar
+Jaipur
+Jammu
+Kavaratti
+Kohima
+Kolkata
+Lucknow
+Mumbai
+New Delhi
+Panaji
+Patna
+Port Blair
+Pune
+Ranchi
+Shillong
+Shimla
+Srinagar
+Thiruvananthapuram
+.
+6 3 60
+6 5 105
+10 3 190
+10 9 55
+11 3 75
+11 6 80
+12 2 45
+12 10 60
+13 10 60
+16 3 65
+18 1 60
+18 2 70
+18 3 155
+18 6 145
+18 9 75
+18 10 75
+18 11 70
+18 12 80
+18 17 95
+20 3 105
+20 4 90
+20 5 145
+20 8 75
+20 11 85
+20 14 115
+20 18 165
+20 19 135
+21 3 145
+21 4 80
+21 5 130
+21 6 175
+21 7 55
+21 9 125
+21 10 150
+21 11 130
+21 14 60
+21 15 95
+21 18 135
+21 19 70
+21 20 135
+22 3 75
+22 6 100
+22 20 85
+23 21 110
+24 6 130
+24 18 135
+25 3 90
+25 11 75
+25 20 55
+26 21 120
+27 18 100
+28 21 70
+29 21 95
+30 3 75
+30 6 80
+30 20 135

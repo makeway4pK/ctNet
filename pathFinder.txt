@@ -1,0 +1,46 @@
+#include<iostream>
+#include<limits.h>
+#include<stack>
+using namespace std;
+
+#define MAX 20
+
+typedef struct route{
+	int label;
+	stack<int> path;
+}route;
+
+route routeFinder(int map[MAX][MAX],int source,int destination){
+	route r;
+	stack<int> s;
+	int prev_Node[MAX], label[MAX], min, min_index, source1;
+	bool visited[MAX];
+	for (int i = 0; i < MAX; i++)
+		prev_Node[i] = source, label[i] = INT_MAX, visited[i] = false;
+	label[source] = 0, visited[source] = true;
+	source1 = source;
+	while (source != destination) {
+		min = INT_MAX;
+		for (int i = 0; i < MAX; i++)
+			if (map[source][i] && !visited[i]
+					&& label[i] >= label[source] + map[source][i]) {
+				label[i] = label[source] + map[source][i];
+				prev_Node[i] = source;
+			}
+		for (int i = 0; i < MAX; i++)
+			if (!visited[i] && min >= label[i]) {
+				min = label[i];
+				min_index = i;
+			}
+		visited[min_index] = true;
+		source = min_index;
+	}
+	while (destination != source1) {
+		s.push(destination+1);
+		destination = prev_Node[destination];
+	}
+	s.push(destination+1);
+	r.label=label[destination];
+	r.path=s;
+	return r;
+}
