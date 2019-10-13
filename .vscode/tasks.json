@@ -1,0 +1,104 @@
+{
+	// See https://go.microsoft.com/fwlink/?LinkId=733558
+	// for the documentation about the tasks.json format
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Compile",
+			"type": "process",
+			"command": "g++",
+			"args": [
+				"${relativeFile}",
+				"-g",
+				// "-fopenmp",
+				// "-lbgi -lgdi32 -lcomdlg32 -luuid -loleaut32 -lole32",
+				// "-llbgi",
+				// "-v"
+				// "-fexec-charset=cp437",
+				"-o",
+				".build/${fileBasenameNoExtension}.exe",
+			],
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"revealProblems": "onProblem",
+				"focus": true,
+				"panel": "dedicated",
+				"showReuseMessage": true
+			},
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": "$gcc"
+		},
+		{
+			"label": "Release build",
+			"type": "process",
+			"command": "g++",
+			"args": [
+				"${relativeFile}",
+				// "-fopenmp",
+				// "-lbgi -lgdi32 -lcomdlg32 -luuid -loleaut32 -lole32",
+				// "-llbgi",
+				// "-v"
+				// "-fexec-charset=cp437",
+				"-o",
+				".build/${fileBasenameNoExtension} - release.exe",
+			],
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"revealProblems": "onProblem",
+				"focus": true,
+				"panel": "dedicated",
+				"showReuseMessage": true
+			},
+			"problemMatcher": "$gcc"
+		},
+		{
+			"label": "Run",
+			"type": "process",
+			"command": "D:/Desktop/C/bin/C++/${fileBasenameNoExtension}.exe",
+			"args": [],
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": true,
+				"panel": "dedicated",
+				"showReuseMessage": true
+			},
+			"group": {
+				"kind": "test",
+				"isDefault": true
+			},
+		},
+		{
+			"label": "Run with args",
+			"type": "process",
+			"command": ".build/${fileBasenameNoExtension}.exe", //"speedwrap.exe",
+			"args": [
+				"${input:args}"
+			],
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": true,
+				"panel": "dedicated",
+				"showReuseMessage": true
+			},
+			// "group": {
+			// 	"kind": "test",
+			// 	"isDefault": true
+			// },
+		}
+	],
+	"inputs": [
+		{
+			"id": "args",
+			"description": "Enter Arguments",
+			"default": " ",
+			"type": "promptString"
+		}
+	]
+}
