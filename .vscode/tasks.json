@@ -16,7 +16,7 @@
 				// "-v"
 				// "-fexec-charset=cp437",
 				"-o",
-				".build/${fileBasenameNoExtension}.exe",
+				"./build/${fileBasenameNoExtension}.exe",
 			],
 			"presentation": {
 				"echo": true,
@@ -44,7 +44,7 @@
 				// "-v"
 				// "-fexec-charset=cp437",
 				"-o",
-				".build/${fileBasenameNoExtension} - release.exe",
+				"./build/${fileBasenameNoExtension} - release.exe",
 			],
 			"presentation": {
 				"echo": true,
@@ -59,7 +59,7 @@
 		{
 			"label": "Run",
 			"type": "process",
-			"command": "D:/Desktop/C/bin/C++/${fileBasenameNoExtension}.exe",
+			"command": "./build/${fileBasenameNoExtension}.exe",
 			"args": [],
 			"presentation": {
 				"echo": true,
@@ -76,7 +76,7 @@
 		{
 			"label": "Run with args",
 			"type": "process",
-			"command": ".build/${fileBasenameNoExtension}.exe", //"speedwrap.exe",
+			"command": "./build/${fileBasenameNoExtension}.exe", //"speedwrap.exe",
 			"args": [
 				"${input:args}"
 			],
