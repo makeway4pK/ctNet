@@ -13,9 +13,17 @@
 			"stopAtEntry": true,
 			"cwd": "${workspaceFolder}",
 			"environment": [],
-			"externalConsole": false,
-			"MIMode": "gdb",
-			"miDebuggerPath": "gdb.exe",
+			"logging": {
+				"programOutput": false
+			},
+			"windows": {
+				"MIMode": "gdb",
+				"miDebuggerPath": "gdb.exe"
+			},
+			"linux": {
+				"MIMode": "gdb",
+				"miDebuggerPath": "/usr/bin/gdb"
+			},
 			"setupCommands": [
 				{
 					"description": "Enable pretty-printing for gdb",
@@ -28,23 +36,31 @@
 			"name": "(gdb) Launch with args",
 			"type": "cppdbg",
 			"request": "launch",
-			"program": "./build/${fileBasenameNoExtension}.exe",
+			"program": "${workspaceFolder}/build/${fileBasenameNoExtension}.exe",
 			"args": [
 				"${input:args}"
 			],
 			"stopAtEntry": true,
 			"cwd": "${workspaceFolder}",
 			"environment": [],
-			"externalConsole": false,
-			"MIMode": "gdb",
-			"miDebuggerPath": "gdb",
+			"logging": {
+				"programOutput": false
+			},
+			"windows": {
+				"MIMode": "gdb",
+				"miDebuggerPath": "gdb.exe"
+			},
+			"linux": {
+				"MIMode": "gdb",
+				"miDebuggerPath": "/usr/bin/gdb"
+			},
 			"setupCommands": [
 				{
 					"description": "Enable pretty-printing for gdb",
 					"text": "-enable-pretty-printing",
 					"ignoreFailures": true
 				}
-			],
+			]
 		},
 	],
 	"inputs": [

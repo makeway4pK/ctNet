@@ -12,19 +12,15 @@
 				"-g",
 				// "-fopenmp",
 				// "-lbgi -lgdi32 -lcomdlg32 -luuid -loleaut32 -lole32",
-				// "-llbgi",
 				// "-v"
 				// "-fexec-charset=cp437",
 				"-o",
-				"./build/${fileBasenameNoExtension}.exe",
+				"./build/${fileBasenameNoExtension}.exe"
 			],
 			"presentation": {
-				"echo": true,
 				"reveal": "always",
 				"revealProblems": "onProblem",
-				"focus": true,
 				"panel": "dedicated",
-				"showReuseMessage": true
 			},
 			"group": {
 				"kind": "build",
@@ -40,20 +36,18 @@
 				"${relativeFile}",
 				// "-fopenmp",
 				// "-lbgi -lgdi32 -lcomdlg32 -luuid -loleaut32 -lole32",
-				// "-llbgi",
 				// "-v"
 				// "-fexec-charset=cp437",
 				"-o",
-				"./build/${fileBasenameNoExtension} - release.exe",
+				"./build/${fileBasenameNoExtension}.exe"
 			],
 			"presentation": {
-				"echo": true,
+				"echo": false,
 				"reveal": "always",
 				"revealProblems": "onProblem",
-				"focus": true,
 				"panel": "dedicated",
-				"showReuseMessage": true
 			},
+			"group": "build",
 			"problemMatcher": "$gcc"
 		},
 		{
@@ -62,35 +56,30 @@
 			"command": "./build/${fileBasenameNoExtension}.exe",
 			"args": [],
 			"presentation": {
-				"echo": true,
-				"reveal": "always",
+				"echo": false,
 				"focus": true,
 				"panel": "dedicated",
-				"showReuseMessage": true
 			},
 			"group": {
 				"kind": "test",
 				"isDefault": true
-			},
+			}
 		},
 		{
 			"label": "Run with args",
 			"type": "process",
-			"command": "./build/${fileBasenameNoExtension}.exe", //"speedwrap.exe",
+			"command": "./build/${fileBasenameNoExtension}.exe",
 			"args": [
 				"${input:args}"
 			],
 			"presentation": {
-				"echo": true,
-				"reveal": "always",
 				"focus": true,
 				"panel": "dedicated",
-				"showReuseMessage": true
 			},
-			// "group": {
-			// 	"kind": "test",
-			// 	"isDefault": true
-			// },
+			"group": "test",
+			"problemMatcher": [
+				"$gcc"
+			]
 		}
 	],
 	"inputs": [
