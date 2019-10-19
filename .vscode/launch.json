@@ -14,8 +14,9 @@
 			"cwd": "${workspaceFolder}",
 			"environment": [],
 			"logging": {
-				"programOutput": false
+				"programOutput": false,
 			},
+			"internalConsoleOptions": "neverOpen",
 			"windows": {
 				"MIMode": "gdb",
 				"miDebuggerPath": "gdb.exe"
